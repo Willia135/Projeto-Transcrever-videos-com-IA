@@ -41,7 +41,7 @@ print("Conversão concluída: audio.mp3")
 #Transcrever o áudio com Whisper local
 
 print("Transcrevendo o áudio com Whisper")
-modelo = whisper.load_model("base")  # Opções: tiny, base, small, medium, large
+modelo = whisper.load_model("base")
 resultado = modelo.transcribe("audio.mp3")
 
 texto_transcrito: str = resultado["text"]
@@ -52,5 +52,6 @@ print("Transcrição concluída")
 with open("transcricao.txt", "w", encoding="utf-8") as f:
     f.write(texto_transcrito)
 print("Transcrição salva em 'transcricao.txt'.")
+
 
 
